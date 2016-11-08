@@ -240,41 +240,6 @@ $(function(){
         _checkGameOver();
     });
 
-    //attack special player 1 button function
-    $('#attackSpecialPlayer1').click(function(){
-        let attackLevel1 = player1.getSpecialAttack();
-        let player2Health = player2.getHealth() - attackLevel1;
-        player2.setHealth(player2Health);
-        $('#player2Health').html(player2.getHealth());
-        _checkGameOver();
-        $('#attackSpecialPlayer1').prop('disabled', true);
-    });
-
-    //attack special player 2 button function
-    $('#attackSpecialPlayer2').click(function(){
-        let attackLevel2 = player2.getSpecialAttack();
-        let player1Health = player1.getHealth() - attackLevel2;
-        player1.setHealth(player1Health);
-        $('#player1Health').html(player1.getHealth());
-        _checkGameOver();
-        $('#attackSpecialPlayer2').prop('disabled', true);
-    });
-
-    //heal special player 1 button function
-    $('#healSpecialPlayer1').click(function(){
-        let player1Health = player1.getHealth() + player1.getHealHealth();
-        player1.setHealth(player1Health);
-        $('#player1Health').html(player1.getHealth());
-        $('#healSpecialPlayer1').prop('disabled', true);
-    });
-
-    //heal special player 2 button function
-    $('#healSpecialPlayer2').click(function(){
-        let player2Health = player2.getHealth() + player2.getHealHealth();
-        player2.setHealth(player2Health);
-        $('#player2Health').html(player2.getHealth());
-        $('#healSpecialPlayer2').prop('disabled', true);
-    });
 });
 
 
