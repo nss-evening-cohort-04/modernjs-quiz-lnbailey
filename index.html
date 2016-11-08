@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Robot Battledome</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="modal fade" id="modalGameOver" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Game Over</h4>
+      </div>
+      <div class="modal-body" style="padding:50px;">
+        <div id="gameOverResult"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-info" id="playAgain" data-dismiss="modal">Play Again</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container-fluid" style="position: absolute; top: 30px; width:100%;">
+  <div class="row" style="padding:15px;">
+    <div class="col-sm-2">
+      <div class="form-group">
+        <label>Player 1</label>
+        <input type="text" class="form-control" id="name1" placeholder="Name 1">
+
+      </div>
+      <div class="form-group">
+        <select class="form-control" id="name1select">
+          <option value="0">Choose One</option>
+          <option value="Drone">Drone</option>
+          <option value="SpaceShip">Space Ship</option>
+          <option value="Bipedal">Bipedal</option>
+          <option value="ATVLava">ATV Lava</option>
+          <option value="Submarine">Submarine</option>
+          <option value="HoverCar">Hover Car</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Name:</label>
+        <div id="player1Name"></div>
+      </div>
+      <div class="form-group">
+        <label>Health:</label>
+        <div id="player1Health"></div>
+      </div>
+      <div class="form-group">
+        <label>Terrain:</label>
+        <div id="player1Terrain"></div>
+      </div>
+
+      <div class="form-group" id="player1img" style="position:relative;">
+      </div>
+
+    </div>
+    <div class="col-sm-8" style="text-align:center;">
+
+      <div><h1>Robot Battledome</h1></div>
+      <div>
+        <button type="button" id="attackBtn" class="btn btn-danger btn-lg" disabled> <i class="fa fa-fire" style="padding-right:5px;" aria-hidden="true"></i>Attack!</button>
+      </div>
+
+      <div id="middleArea" style="padding-top:100px;">
+        <img src="images/boom.png" class="img-circle" id="boom" style="display:none;" width="304" height="236">
+
+      </div>
+
+    </div>
+    <div class="col-sm-2">
+      <div class="form-group">
+        <label>Player 2</label>
+        <input type="text" class="form-control" id="name2" placeholder="Name 2">
+      </div>
+      <div class="form-group">
+        <select class="form-control" id="name2select">
+          <option value="0">Choose One</option>
+          <option value="Drone">Drone</option>
+          <option value="SpaceShip">Space Ship</option>
+          <option value="Bipedal">Bipedal</option>
+          <option value="ATVLava">ATV Lava</option>
+          <option value="Submarine">Submarine</option>
+          <option value="HoverCar">Hover Car</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Name:</label>
+        <div id="player2Name"></div>
+      </div>
+      <div class="form-group">
+        <label>Health:</label>
+        <div id="player2Health"></div>
+      </div>
+      <div class="form-group">
+        <label>Terrain:</label>
+        <div id="player2Terrain"></div>
+      </div>
+      <div class="form-group" id="player2img" style="position:relative;">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+	<script src="/lib/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  	<script src="javascripts/quiz.js"></script>
+
+</body>
+
+</html>
