@@ -1,0 +1,20 @@
+{
+  "name": "api",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Ellen Bailey <ellen@lndesigns.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/lnbailey/api-demo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
